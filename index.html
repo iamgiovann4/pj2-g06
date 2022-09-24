@@ -13,12 +13,12 @@
             let slideIndex = 1;
     showSlides(slideIndex);
 
-    // Next/previous controls
+    // Controle de antes e depois
     function plusSlides(n) {
     showSlides(slideIndex += n);
     }
 
-    // Thumbnail image controls
+    // Thumbnail controle da imagem
     function currentSlide(n) {
     showSlides(slideIndex = n);
     }
@@ -38,6 +38,7 @@
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
  }
+ 
     </script>
 
 </head>
@@ -138,32 +139,32 @@
    <!-- Slideshow container -->
 <div class="slideshow-container">
 
-    <!-- Full-width images with number and caption text -->
+    <!-- Imagens de largura total com texto de número e legenda -->
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
-      <img src="img/categoria.png" style="width:100%">
+      <img src="img/img1.jpg" style="width:100%">
       <div class="text">Caption Text</div>
     </div>
   
     <div class="mySlides fade">
       <div class="numbertext">2 / 3</div>
-      <img src="img/categoria.png" style="width:100%">
+      <img src="img/img2.jpg" style="width:100%">
       <div class="text">Caption Two</div>
     </div>
   
     <div class="mySlides fade">
       <div class="numbertext">3 / 3</div>
-      <img src="img/categoria.png" style="width:100%">
+      <img src="img/img3.jpg" style="width:100%">
       <div class="text">Caption Three</div>
     </div>
   
-    <!-- Next and previous buttons -->
+    <!-- Botões próximo e anterior -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
   <br>
   
-  <!-- The dots/circles -->
+  <!-- Os pontos/círculos -->
   <div style="text-align:center">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
