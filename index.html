@@ -25,9 +25,36 @@
                 <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
             </ul>
-            </div> 
-        </div><!--container-->
-    </nav>
+
+            <!--dropdown-->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggles" data-toggle="dropdown" id="navDrop">Social..
+                   </a>
+                   <div class="dropdown-menu w-25">
+                       <a href="#" class="dropdown-item">Facebook</a>
+                       <a href="#" class="dropdown-item">Twitter</a>
+                       <a href="#" class="dropdown-item">Instagram</a>
+                   </div>
+               </li>
+            </ul>
+
+            <!--Formulario do pesquisa-->
+            <form class="form-inline">
+                <input type="search" class="form-control ml-lg-5 mr-2" placeholder="Buscar...">
+                <button class="btn btn-dark mb-1 mt-1" type="submit">OK</button>
+               </form>
+
+        </div><!--div itens navbar-->
+        <div class="sigin ml-2">
+            <button class="sig-in">Sig-in</button>
+            <button class="sig-in">Sig-up</button>
+        </div>
+       </nav> <!--navbar-->
+   </div><!--container-->
+
+   
+
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>
