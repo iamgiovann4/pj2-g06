@@ -79,6 +79,14 @@ h1{
   margin-bottom: 30px;
 }
 
+.categoria > button{
+  border: 0;
+  background-color: #00ff97;
+  border-radius: 0 18px 0 18px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
 .content{
   display: flex;
   flex-direction: row;

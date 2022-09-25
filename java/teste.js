@@ -25,5 +25,4 @@ var elementoOriginal = document.getElementById("teste");
 var elementoClone = elementoOriginal.cloneNode(true);
 // inserindo o elemento na paǵina
 elementoOriginal.appendChild(elementoClone);
-/*clonando elemento*/
 
