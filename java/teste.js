@@ -16,7 +16,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Tempo da imagem de 2 segundos
+  setTimeout(showSlides, 5000); // Tempo da imagem de 5 segundos
 }
 /*Fim do Slide*/
 
@@ -24,6 +24,8 @@ function showSlides() {
 var elementoOriginal = document.getElementById("clone");
 var elementoClone = elementoOriginal.cloneNode(true);
 var exib = document.getElementById('exib');
+
+
 // inserindo o elemento na paǵina
 exib.appendChild(elementoClone);
 
