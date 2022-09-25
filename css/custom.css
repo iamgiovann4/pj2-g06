@@ -151,6 +151,12 @@ img {vertical-align: middle;}
   .text {font-size: 11px}
 }
 
+.mae{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 30px;
+}
+
 /* card */
 .content{
   width: 100%;
@@ -161,6 +167,7 @@ img {vertical-align: middle;}
   border-radius: 20px;
   box-shadow: 0 2px 18px rgb(205, 203, 203);
   width: 250px;
+  margin-right: 10px;
 }
 
 .mediaCard{

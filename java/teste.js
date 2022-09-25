@@ -21,8 +21,9 @@ function showSlides() {
 /*Fim do Slide*/
 
 /*clonando elemento*/
-var elementoOriginal = document.getElementById("teste");
+var elementoOriginal = document.getElementById("clone");
 var elementoClone = elementoOriginal.cloneNode(true);
+var exib = document.getElementById('exib');
 // inserindo o elemento na paǵina
-elementoOriginal.appendChild(elementoClone);
+exib.appendChild(elementoClone);
 
