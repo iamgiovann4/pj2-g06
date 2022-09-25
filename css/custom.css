@@ -156,13 +156,47 @@ h1{
   background-color: #717171;
 }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+/* card */
+.content{
+  width: 100%;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.card{
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 18px rgb(205, 203, 203);
+  width: 250px;
+}
+
+.mediaCard{
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrDnq2FI6uKnivHH4v7D_pYTxxQDXYiDdbE1DFFGI1nw&s) center/cover;
+  height: 200px;
+  width: 100%;
+}
+
+.topCard{
+  padding: 20px;
+  padding-top: 0px;
+}
+.bottomCard{
+  padding: 20px;
+}
+
+.actions{
+  background: none;
+  border: none;
+  color: blueviolet;
+  margin-top: 10px;
+}
+
+.title{
+  color: gray;
+}
+
+.secondText{
+  color: rgba(122, 166, 168, 0.734);
+}
+
+.bottomText{
+  color: rgb(103, 92, 81);
 }
