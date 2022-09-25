@@ -19,3 +19,11 @@ function showSlides() {
   setTimeout(showSlides, 5000); // Change image every 2 secondsa
 }
 /*Fim do Slide*/
+
+/*clonando elemento*/
+var elementoOriginal = document.getElementById("teste");
+var elementoClone = elementoOriginal.cloneNode(true);
+// inserindo o elemento na paǵina
+elementoOriginal.appendChild(elementoClone);
+/*clonando elemento*/
+
