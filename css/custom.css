@@ -1,10 +1,76 @@
 body, html{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* titulo logo */
+h1{
+  font-family: 'Fredoka One', cursive;
+}
+
+/* div logo */
+#logo{
+  padding: 0 5px 0 0;
+}
+
+/* logo */
+#logo svg {
+  width: 47px;
+  height: 50px;
+}
+
+/* cor navbar */
+.bg-light{
+  background-image: linear-gradient(280deg, #ff8fff 0, #ff8af5 3.33%, #ff88dd 6.67%, #ff89c5 10%, #ff8ead 13.33%, #ff9597 16.67%, #ff9e81 20%, #ffa86c 23.33%, #ffb257 26.67%, #ffbd43 30%, #ffc72e 33.33%, #ffd115 36.67%, #ffda00 40%, #ffe200 43.33%, #f4e900 46.67%, #ddf000 50%, #c4f623 53.33%, #a9fb3b 56.67%, #8aff52 60%, #62ff68 63.33%, #0cff7f 66.67%, #00ff97 70%, #00ffaf 73.33%, #00ffc8 76.67%, #00ffe1 80%, #00fffa 83.33%, #00ffff 86.67%, #00ffff 90%, #00ffff 93.33%, #00ffff 96.67%, #00ffff 100%);
+}
+
+/* links da navbar */
+.nav-link{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* botão entrar */
+.sign-in{
+  border: 0;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  background-color: #59c4f7;
+}
+
+/* botão cadastrar */
+.sign-up{
+  border: 0;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  background-color: #7af9a7;;
+}
+
+/* botão ok/pesquisar */
+.btn{
+  background-color: #4a443dfa;
+  border: 0;
+  border-radius: 15px;
+}
+
+/* input pesquisar */
+.form-control{
+  border-radius: 10px;
+}
+
+/* janela com os links para as redes sociais */
+.dropdown-menu{
+  background-image: linear-gradient(280deg, #ff8fff 0, #ff8af5 3.33%, #ff88dd 6.67%, #ff89c5 10%, #ff8ead 13.33%, #ff9597 16.67%, #ff9e81 20%, #ffa86c 23.33%, #ffb257 26.67%, #ffbd43 30%, #ffc72e 33.33%, #ffd115 36.67%, #ffda00 40%, #ffe200 43.33%, #f4e900 46.67%, #ddf000 50%, #c4f623 53.33%, #a9fb3b 56.67%, #8aff52 60%, #62ff68 63.33%, #0cff7f 66.67%, #00ff97 70%, #00ffaf 73.33%, #00ffc8 76.67%, #00ffe1 80%, #00fffa 83.33%, #00ffff 86.67%, #00ffff 90%, #00ffff 93.33%, #00ffff 96.67%, #00ffff 100%);
+}
+
+/* liks das redes sociais */
+.dropdown-item{
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .flex{
-    display: flex;
+  display: flex;
 }
 
 .cat{
@@ -88,4 +154,15 @@ body, html{
 
 .active, .dot:hover {
   background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
