@@ -86,7 +86,7 @@
         </div><!-- #navbarsite  -->
 
         <div class="sigin ml-2">
-          <button class="sign-in">Entrar</button>
+          <button class="sign-in" onclick="showModal('#modal-cadastrar')">Entrar</button>
           <button class="sign-up">Cadastrar-se</button>
         </div> <!-- .sigin -->
       </div><!-- .container -->
@@ -180,12 +180,51 @@
           </div><!--card-->
         </div><!--content-->
       </div><!--show-->
+    </div><!--container-->
 
       <footer>
         <p>© Copyright 2022 BestFlix | Todos os direitos Reservados</p>
         <p>Giovanna Siqueira Nicolau</p>
       </footer>
-    </div><!--container-->
+
+      <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+        <div class="modal-body container">
+            <h1 class="text-center">Cadastro</h1><br>
+            <form action="" method="post">
+              
+
+              <label for="">Nome</label>
+              <input type="text" placeholder="Nome..." required>
+              
+              <br><br>
+
+              <label for="">Data de Nascimento</label>
+              <input type="date" placeholder="dd/mm/yyyy" required>
+              
+              <br><br>
+
+              <label for="">E-mail</label>
+              <input type="email" placeholder="teste@gmail.com..." required>
+              
+              <br><br>
+
+              <label for="">CPF</label>
+              <input type="text" placeholder="999.999.999.99" required>
+              
+              <br><br>
+
+              <label for="">Sexo</label>
+              <input type="text" placeholder="Digite aqui...">
+              
+              <br><br>
+
+              <button type="submit">Enviar</button>
+          </form>
+        </div>
+    </div>
+    
+
+    
   
     <script src="java/teste.js"></script>
     <script src="js/jquery.js"></script>

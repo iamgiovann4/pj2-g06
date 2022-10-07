@@ -1,3 +1,15 @@
+:root{
+  --primary: #298519;
+  --secundary: #13645b;
+  --secundary-dark: #034d45;
+  --grey-0: #000;   
+  --grey-200: #181818;
+  --grey-400: #414141;
+  --grey-600: #818181;
+  --grey-800: #d3d3d3;
+  --grey-1000:#fff;
+}
+
 body, html{
   margin: 0;
   padding: 0;
@@ -145,6 +157,46 @@ img {vertical-align: middle;}
   background-color: #717171;
 }
 
+/* modal log-in */
+.modal{
+  background-color: #f0f0f085;
+  position: absolute;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .modal-body{
+  width: 600px;
+  border-radius: 15px;
+  background: var(--grey-1000);
+  color: var(--grey-0);
+  padding: 30px 20px;
+}
+
+.modal .modal-body form{
+  display: flex;
+  flex-direction: column;
+}
+
+.modal .modal-body form label{
+  margin: 15px 0 0 0;
+}
+
+.modal .modal-body form input[type=text]{
+  height: 30px;
+  padding: 3px 5px;
+  border-radius: 10px;
+}
+
+.modal .modal-body form button{
+  margin: 15px 0 0 0;
+}
+
 
 /* Em telas menores, diminua o tamanho do texto */
 @media only screen and (max-width: 300px) {
@@ -202,3 +254,5 @@ img {vertical-align: middle;}
 .bottomText{
   color: rgb(103, 92, 81);
 }
+
+
