@@ -132,6 +132,13 @@ h1{
   transition: background-color 0.6s ease;
 }
 
+/* Div para alinhamento dos cards  */
+.content{
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
 /* Slideshow container (TESTEI E NÃO FUNCIONOU) */
 /* .slideshow-container {
   max-width: 1000px;
@@ -159,23 +166,17 @@ h1{
   top: 0;
 } */
 
-/* Alinhamento dos cards  */
-.content{
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-}
-
 /* TESTEI E NÃO FUNCIONOU */
 /* {box-sizing: border-box;}
 .mySlides {display: none;}
 img {vertical-align: middle;} */
 
-.active {
+/* TESTEI E NÃO FUNCIONOU */
+/* .active {
   background-color: #717171;
-}
+} */
 
-/* modal log-in */
+/* Modal entrar, div que engloba o body e form. */
 .modal{
   background-color: #f0f0f0ab;
   position:absolute;
@@ -183,6 +184,7 @@ img {vertical-align: middle;} */
   flex-direction: row;
 }
 
+/* Div que está dentro da div.modal e seu filho é o form */
 .modal .modal-body{
   border-radius: 100px;
   background: var(--grey-1000);
@@ -191,6 +193,7 @@ img {vertical-align: middle;} */
   border: 1px solid black;
 }
 
+/* Formulário entrar */
 .modal .modal-body form{
   border: 1px solid black;
   display: flex;
@@ -198,16 +201,19 @@ img {vertical-align: middle;} */
   align-items: center;
 }
 
+/* Label dentro do form entrar */
 .modal .modal-body form label{
   margin: 15px 0 0 0;
 }
 
+/* Input dentro do form entrar */
 .modal .modal-body form input{
   border-radius: 20px;
   padding: 8px;
   width: 50%;
 }
 
+/* Botão enviar form entrar */
 .modal .modal-body form button{
   margin: 15px 0 15px 0;
   border-radius: 20px;
@@ -215,8 +221,7 @@ img {vertical-align: middle;} */
   width: 50%;
 }
 
-
-/* Em telas menores, diminua o tamanho do texto */
+/* RESPONSIVIDADE */
 @media only screen and (max-width: 575px) {
   .text {font-size: 11px}
   .modal {
@@ -228,14 +233,12 @@ img {vertical-align: middle;} */
     margin: auto;
     overflow: scroll;
   }
-
   .modal .modal-body {
     border-radius: 20px;
     background: var(--grey-1000);
     color: var(--grey-0);
     padding: 30px 20px;
   }
-
   .modal .modal-body form {
     font-size: 10px;
     /* width: 300px; */
@@ -258,6 +261,7 @@ img {vertical-align: middle;} */
   }
 }
 
+/* Div principal dos cards */
 .container1{
   display: flex;
   flex-direction: row;
