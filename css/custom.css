@@ -179,7 +179,7 @@ img {vertical-align: middle;} */
 /* Modal entrar, div que engloba o body e form. */
 .modal{
   background-color: #f0f0f0ab;
-  position:absolute;
+  position: relative;
   display: flex;
   flex-direction: row;
 }
