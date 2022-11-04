@@ -1,6 +1,41 @@
 :root{
+    --primary: #298519;
+    --secundary: #13645b;
+    --secundary-dark: #034d45;
+    --grey-0: #000;   
+    --grey-200: #181818;
+    --grey-400: #414141;
+    --grey-600: #818181;
+    --grey-800: #d3d3d3;
+    --grey-1000:#fff;
+  
+  
+    --color-primary-5: #56AB89;
+    --fundo: #90EFE2;
     --nav: #3FCDB9;
+    --color-primary-3: #2E795B;
+    --color-primary-4: #0F3526;
 }
+
+body, html{
+    margin: 0;
+    padding: 0;
+    background-color: var(--fundo);
+}
+
 .bg-faded{
     background-color: var(--nav);
+}
+
+/* Div com os botões categoria e ver tudo alinhados */
+.botoes_categoria{
+    display: flex;
+    justify-content: space-between;
+}
+  
+/* Alinhamento das bolinhas de categorias*/
+.cat{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
 }
