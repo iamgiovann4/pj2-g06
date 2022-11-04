@@ -1,0 +1,6 @@
+:root{
+    --nav: #3FCDB9;
+}
+.bg-faded{
+    background-color: var(--nav);
+}
