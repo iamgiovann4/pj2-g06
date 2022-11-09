@@ -57,7 +57,7 @@
 
         <div class="sigin ml-2">
           <button class="sign-in" onclick="showModal('#modal-cadastrar')">Entrar</button>
-          <button class="sign-up">Cadastrar-se</button>
+          <button class="sign-up" onclick="showModal('#modal-cadastrar')">Cadastrar-se</button>
         </div> <!-- .sigin -->
       </div><!-- .container -->
     </nav> <!-- .navbar -->
@@ -128,6 +128,25 @@
       </ol>
     </div> <!-- <div class="carousel-inner"> -->
   </div> <!-- Carousel -->
+
+  <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+    <div class="modal-body">
+        <h1>Cadastrar Produção</h1>
+        <form onsubmit="insert(event)">
+            <label for="title">Title:</label>
+            <input type="text" name="title">
+            <label for="Description">Description:</label>
+            <input type="text" name="description">
+            <label for="category">category:</label>
+            <input type="text" name="category">
+            <label for="Cover">Cover:</label>
+            <input type="text" name="cover">
+            <label for="Classification">Classification:</label>
+            <input type="text" name="classification">
+            <button type="submit" onclick="closeAllModal()">Cadastrar</button>
+        </form>
+    </div>
+</div>
   
   <script src="assets/script.js"></script>
   <script src="js/jquery.js"></script>
