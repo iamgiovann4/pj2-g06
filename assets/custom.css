@@ -40,6 +40,14 @@ body, html{
     overflow-x: auto;
 }
 
+.card-rodape-empresa{
+    font-size: 0.7rem;
+}
+
+.card{
+    width: 350px;
+}
+
 .modal{
     background-color: #0c0c0c85;
     position: absolute;
