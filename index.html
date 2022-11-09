@@ -154,18 +154,16 @@
 
   <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
     <div class="modal-body">
-        <h1>Cadastrar Produção</h1>
+        <h1>Cadastro</h1>
         <form onsubmit="insert(event)">
-            <label for="title">Title:</label>
+            <label for="title">Nome:</label>
             <input type="text" name="title">
-            <label for="Description">Description:</label>
+            <label for="Description">Email:</label>
             <input type="text" name="description">
-            <label for="category">category:</label>
+            <label for="category">CPF:</label>
             <input type="text" name="category">
-            <label for="Cover">Cover:</label>
+            <label for="Cover">Senha:</label>
             <input type="text" name="cover">
-            <label for="Classification">Classification:</label>
-            <input type="text" name="classification">
             <button type="submit" onclick="closeAllModal()">Cadastrar</button>
         </form>
     </div>
