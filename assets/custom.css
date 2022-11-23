@@ -1,3 +1,4 @@
+/*paleta de cores*/
 :root{
     --primary: #298519;
     --secundary: #13645b;
@@ -17,12 +18,14 @@
     --color-primary-4: #0F3526;
 }
 
+/*mini reset*/
 body, html{
     margin: 0;
     padding: 0;
     background-color: #fff;
 }
 
+/*cor da navbar*/
 .bg-faded{
     background-color: var(--nav);
 }
@@ -40,6 +43,20 @@ body, html{
     overflow-x: auto;
 }
 
+/*scroll*/
+.cat::-webkit-scrollbar {
+    height: 10px;               /* width of the entire scrollbar */
+  }
+.cat::-webkit-scrollbar-track {
+    background: var(--grey-400);        /* color of the tracking area */
+  }
+  
+.cat::-webkit-scrollbar-thumb {
+    background-color: var(--grey-600);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+
+/*card*/
 .card-rodape-empresa{
     font-size: 0.7rem;
 }
@@ -48,6 +65,7 @@ body, html{
     width: 350px;
 }
 
+/*modal*/
 .modal{
     background-color: #0c0c0c85;
     position: absolute;

@@ -4,6 +4,7 @@ function showModal(idModal){
     modal.style.display = "flex"
 }
 
+//deicar o modal escondido
 function hideModal(idModal, event) {
     if(event.target.className === 'modal'){
         const modal = document.querySelector(idModal)

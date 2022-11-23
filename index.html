@@ -6,7 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projeto Integrador II</title>
 
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <!--css bots-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <!--js boot-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/custom.css">
 </head>
 <body>
@@ -63,7 +67,8 @@
     </nav> <!-- .navbar -->
   </div>
 
-  <div class="categoria m-0 mt-3">
+  <!--categorias-->
+  <div class="categoria m-0 mt-3 mb-3">
     <div class="botoes_categoria">
       <button class="ml-3">Categorias</button>
       <button class="mr-3">Ver tudo</button>
@@ -129,6 +134,14 @@
     </div> <!-- <div class="carousel-inner"> -->
   </div> <!-- Carousel -->
 
+  <!--divs das categorias para js-->
+  <div id="festas"></div>
+  <div id="palestras"></div>
+  <div id="halloween"></div>
+  <div id="standUP"></div>
+  <div id="workshops"></div>
+
+  <!--CARD-->
   <div class="col-sm-4">
     <div class="card">
         <div class="card-header col text-center p-2">Evento</div>
@@ -152,6 +165,7 @@
           </div><!--card-->
         </div><!--col do car-->
 
+      <!--modal cadastrar-->
   <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
     <div class="modal-body">
         <h1>Cadastro</h1>
@@ -168,8 +182,6 @@
         </form>
     </div>
 </div>
-
-  <h1 style="font-size: 60PX;">DEIXEI PARA VOCÊ FAZER O MODAL DO ENTRAR</h1><BR><BR><BR></BR></BR></BR>
   
   <script src="assets/script.js"></script>
   <script src="js/jquery.js"></script>
