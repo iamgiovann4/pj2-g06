@@ -1,93 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt - BR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projeto Integrador II</title>
 
-  <!--css bots-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <!--js boot-->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="assets/custom.css">
+
+  <script src="bootstrap/js/jquery.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
 </head>
-<body>
+<body onload="loadEventos(), loadSlide()">
+  <a href="index.html"><i class="fa-solid fa-arrow-up" style="position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0e8fff;
+  color: black;
+  padding: 15px;"></i></a>
+  
   <div class="wrapper">
     <nav class="navbar navbar-expand-lg navbar-light bg-faded"> <!-- navbar-light: cor padrão claro; bg-faded: colocar cor na nav;  -->
-      <div class="container justify-content-around"> <!-- centralização dos atributos da nav -->
+      <div class="container justify-content-center"> <!-- centralização dos atributos da nav -->
 
         <!-- Elemento do destaque no navbar -->
-        <a href="#" class="navbar-brand flex"> <!-- flex para conseguirmos alinhar a logo e nome-Logo -->
           <div id="logo">
-            <a href="index.html"><img src="./img/logo.svg" alt=""></a>
-            
-            
+            <a class="logo" href="index.html">
+              <img class="imgLogo" src="img/logo.svg" alt="logo">
+            </a>
+            <h1>Nosso<span>Site</span></h1>
           </div> <!--#logo-->
-          <h1>NossoSite</h1>
-        </a> <!-- .navbar-brand -->
 
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarsite"> <!-- botão para abrir quando o site for vizualizado em telas menores -->
           <span class="navbar-toggler-icon"></span> 
         </button>
 
         <!--Criação dos itens do navbar-->
-        <div class="navbar-collapse collapse" id="navbarsite">
+        <div class="navbar-collapse collapse ml-5" id="navbarsite">
           <ul class="navbar-nav">
-            <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+            <li class="nav-item"><a href="#" class="nav-link active">Início</a></li>
+            <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li class="nav-item"><a href="#footer" class="nav-link">Contato</a></li>
           </ul> <!-- .navbar-nav-->
 
           <!--dropdown-->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggles" data-toggle="dropdown" id="navDrop">Social..</a> <!-- para conseguirmos abrir a janelinha com os link das redes -->
+              <a href="#" class="nav-link dropdown-toggles" data-toggle="dropdown" id="navDrop">Social...</a> <!-- para conseguirmos abrir a janelinha com os link das redes -->
               <div class="dropdown-menu w-25">
-                <a href="#" class="dropdown-item">Facebook</a>
-                <a href="#" class="dropdown-item">Twitter</a>
-                <a href="#" class="dropdown-item">Instagram</a>
+                <a href="https://pt-br.facebook.com/" class="dropdown-item">Facebook</a>
+                <a href="https://twitter.com/login?lang=pt" class="dropdown-item">Twitter</a>
+                <a href="https://www.instagram.com/" class="dropdown-item">Instagram</a>
               </div> <!-- .dropdown-menu -->
             </li> <!-- .nav-item -->
           </ul> <!-- .navbar-nav -->  <br>
 
-          <!--Formulario do pesquisa-->
+          <!--Formulario de pesquisa-->
           <form class="form-inline"> 
             <input type="search" class="form-control ml-lg-5 mr-2" placeholder="Buscar...">
-            <button class="btn btn-dark mb-1 mt-1" type="submit">OK</button>
+            <button class="botao btn-light mb-1 mt-1" type="submit">OK</button>
           </form> <!-- .form-inline -->
         </div><!-- #navbarsite  -->
 
         <div class="sigin ml-2">
-          <button class="sign-in" onclick="showModal('#modal-cadastrar')">Entrar</button>
-          <button class="sign-up" onclick="showModal('#modal-cadastrar')">Cadastrar-se</button>
+          <a href="backend/index.php"><button class="sign-in">Entrar</button></a>
+          <button class="sign-up" onclick="showModalCadastrar('#modal-cadastrar')">Cadastrar-se</button>
         </div> <!-- .sigin -->
       </div><!-- .container -->
     </nav> <!-- .navbar -->
-  </div>
-
+  
   <!--categorias-->
-  <div class="categoria m-0 mt-3 mb-3">
+  <div class="categoria">
     <div class="botoes_categoria">
-      <button class="ml-3">Categorias</button>
-      <button class="mr-3">Ver tudo</button>
+      <h3 class="ml-4">Categorias</h3>
+      <!-- <button class="mr-3">Ver tudo</button> -->
     </div>
     
-    <div class="cat justify-content-between">
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"></a>
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"></a>
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"></a>
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"></a>
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"></a>
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"></a>
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"> </a>
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"> </a>
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"> </a>
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"> </a>
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"> </a>
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"></a>
-      <a href="#"><img src="img/categoria.png" alt="Categoria x" width="115" height="150"></a>
+    <div class="container-lg container-fluid-md cat justify-content-between">
+      <a href="#festas"><img class="links" title="Festas" src="img/festas.jpg" alt="Festas" width="110" height="110"></a>
+      <a href="#palestras"><img class="links" title="Palestras" src="img/palestras.jpg" alt="Palestras" width="110" height="110"></a>
+      <a href="#halloween"><img class="links" title="Halloween" src="img/halloween.jpg" alt="Halloween" width="110" height="110"></a>
+      <a href="#standUP"><img class="links" title="StandUp" src="img/startup.jpg" alt="StandUp" width="110" height="110"></a>
+      <a href="#workshops"><img class="links" title="Workshops" src="img/workshop.jpg" alt="Workshops" width="110" height="110"></a>
     </div><!-- .cat -->
   </div> <!-- .categoria -->
 
@@ -102,20 +100,8 @@
           <p class="d-none d-sm-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
       </div> <!-- Item 1 do carousel -->
-      <div class="carousel-item">
-        <img src="img/carousel1.jpg" alt="" class="img-fluid d-block">
-        <div class="carousel-caption d-none d-block">
-          <h3>Esse, ipsam</h3>
-          <p class="d-none d-sm-block">Maxime cum commod filum exercitationem temporibus assumenda.</p>
-        </div>
-      </div> <!-- Item 2 do carousel -->
-      <div class="carousel-item">
-        <img src="img/carousel2.jpg" alt="" class="img-fluid d-block">
-        <div class="carousel-caption d-none d-block">
-          <h3>Esse, ipsam</h3>
-          <p class="d-none d-sm-block">Maxime cum commod filum exercitationem temporibus assumenda.</p>
-        </div>
-      </div> <!-- Item 3 do carousel -->
+      <div id="carrossel"></div>
+
       <!-- Controles '<' '>' dos slides -->
       <a href="#carouselhome" class="carousel-control-prev" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
@@ -125,66 +111,141 @@
         <span class="carousel-control-next-icon"></span>
         <span class="sr-only">Próximo</span>
       </a>
-      <!-- Lista com os indicadores -->
-      <ol class="carousel-indicators">
-        <li class="active" data-target="#carouselhome" data-slide-to="0"></li>
-        <li data-target="#carouselhome" data-slide-to="1"></li>
-        <li data-target="#carouselhome" data-slide-to="2"></li>
-      </ol>
+      
     </div> <!-- <div class="carousel-inner"> -->
   </div> <!-- Carousel -->
 
-  <!--divs das categorias para js-->
-  <div id="festas"></div>
-  <div id="palestras"></div>
-  <div id="halloween"></div>
-  <div id="standUP"></div>
-  <div id="workshops"></div>
+  <!--divs das categorias para js--> <!-- Aqui irá aparecer os cards -->
+  <div id="corpo1">
+    <h2 class="festas">Festas</h2>
+    <div id="festas"></div>
+    <h2 class="palestras">Palestras</h2>
+    <div id="palestras"></div>
+    <h2 class="halloween">Halloween</h2>
+    <div id="halloween"></div>
+    <h2 class="standup">StandUP</h2>
+    <div id="standUP"></div>
+    <h2 class="workshops">Workshops</h2>
+    <div id="workshops"></div>
+  </div>
 
-  <!--CARD-->
-  <div class="col-sm-4">
-    <div class="card">
-        <div class="card-header col text-center p-2">Evento</div>
-        <img src="https://radio93fm.com.br/wp-content/uploads/2019/02/produto.png" class="card-img-top">
-        <div class="card-body">
-            <h5 class="card-title">NOME DO EVENTO</h5>
-            <h6 class="card-sub-title mb-2 text-muted">DESCRIÇÃO DO EVENTO</h6>
-            <p class="car-text small text-justify">UMA DESCRIÇÃO MAIOR SOBRE O EVENTO</p>
+  <!-- Footer -->
+  <footer class="end bg-dark text-center text-white" id="footer">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-google"></i>
+        </a>
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-linkedin-in fa-color-blue"></i>
+        </a>
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-github fa-color-blue"></i>
+        </a>
+      </section>
+      <!-- Section: Social media -->
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Entre em contato conosco</strong>
+              </p>
             </div>
-            <ul class="list-group">
-                <li class="list-group-item">Preço: R$99,99 OU GRATIS</li>
-                <li class="list-group-item">DIA: 01/01/2021</li>
-                <li class="list-group-item">LOCAL DO EVENTO</li>
-            </ul>
-            <div class="card-body p-2">
-                <a href="#" class="card-link">SEPARAR VAGA</a>
-                <a href="#" class="card-link">Detalhes..</a>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input class="form-control" type="email" id="form5Example21" placeholder="email@gmail.com"/>
+                <br>
+                <textarea class="form-control" name="" id="" cols="60" rows="5" placeholder="Digite aqui..."></textarea>
+                <!--Grid column-->
+                <div class="col-auto">
+                  <!-- Submit button -->
+                  <button class="btn btn-outline-light mb-4" type="submit">
+                    Enviar
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="card-footer text-right card-rodape-empresa text-muted">EMPRESA QUE ESTÁ FAZENDO O EVENTO
-            </div>
-          </div><!--card-->
-        </div><!--col do car-->
+            <!--Grid column-->
+          </div>
+        <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+      <!-- Section: Text -->
+      <section class="mb-4" id="sobre">
+        <h2 style="border: none; border-bottom: 1px solid orange;">Sobre nós</h2>        
+        <p>
+          Site desenvolvido para fins acadêmicos, com o intuito de aplicarmos tudo o que aprendemos nas aulas. O NossoSite tem como principal objetivo o cadastro de eventos em geral.
+        </p>
+      </section>
+      <!-- Section: Text -->
+    </div>
+    <!-- Grid container -->
+    <!-- Copyright -->
+    <div class="text-center text-muted footer-bg-color p-3">
+      © 2022 Copyright | Giovanna Siqueira | Vítor Moreira
+    </div>
+    <!-- Copyright -->
+    
 
-      <!--modal cadastrar-->
-  <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+  <!--modal cadastrar-->
+  <div class="modal" id="modal-cadastrar" onclick="hideModalCadastrar('#modal-cadastrar', event)" style="height:1500px; align-items: unset; color:black;">
     <div class="modal-body">
-        <h1>Cadastro</h1>
-        <form onsubmit="insert(event)">
-            <label for="title">Nome:</label>
-            <input type="text" name="title">
-            <label for="Description">Email:</label>
-            <input type="text" name="description">
-            <label for="category">CPF:</label>
-            <input type="text" name="category">
-            <label for="Cover">Senha:</label>
-            <input type="text" name="cover">
-            <button type="submit" onclick="closeAllModal()">Cadastrar</button>
+
+        <div class="caixaEventos">
+        <form onsubmit="insertCadastro(event)" class="painel">
+          <h2>Cadastro</h2>
+          <label for="nome">Seu Nome:</label>
+          <input type="text" name="nome" required>
+          <label for="cpf">Seu CPF:</label>
+          <input type="cpf" name="cpf">
+          <label for="dataNascimento">Data Nascimento:</label>
+          <input type="date" name="dataNascimento">
+
+          <label for="sexo">sexo:</label>
+            <select id="sexo" name="sexo">
+                <option value="selecione" selected disabled >Selecione</option>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+            </select>
+
+          <label for="email">E-mail:</label>
+          <input type="email" name="email">
+          <label for="usuario">Usuario:</label>
+          <input type="text" name="usuario">
+          <label for="senha">Senha:</label>
+          <input type="text" name="senha">
+          
+          <input type="submit" onclick="closeAllModalCadastrar()" value="Cadastrar"></input>
         </form>
     </div>
+  </div>
 </div>
-  
-  <script src="assets/script.js"></script>
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
+<script src="assets/script.js"></script>
+<!-- <script src="assets/script/main.js"></script> -->
 </body>
 </html>
